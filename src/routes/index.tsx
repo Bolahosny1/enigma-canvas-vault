@@ -19,6 +19,62 @@ export const Route = createFileRoute("/")({
 
 const EMAIL = "ahmedsamyaminhamed@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/ahmedsamyamin/";
+const PHONE = "+201124890707";
+
+const EXPERIENCE = [
+  {
+    t: "Nov 2025 — Feb 2026",
+    role: "Cyber Security Trainee",
+    org: "Cyberthos",
+    bullets: [
+      "Completed hands-on penetration testing training focused on real-world assessment workflows.",
+      "Conducted reconnaissance, enumeration & vulnerability analysis in simulated lab environments.",
+      "Drafted professional vulnerability reports with exploitation techniques and actionable remediation.",
+    ],
+  },
+  {
+    t: "Oct 2025 — Present",
+    role: "Cybersecurity Instructor (Volunteer)",
+    org: "GDG Future Academy",
+    bullets: [
+      "Delivered foundational cybersecurity & pentesting workshops to 50+ students.",
+      "Designed and guided hands-on labs to build students' practical offensive security skills.",
+      "Simplified complex topics including OSINT, web vulnerabilities, and networking concepts.",
+    ],
+  },
+  {
+    t: "Jun 2025 — Dec 2025",
+    role: "Cyber Security Trainee",
+    org: "Digital Egypt Pioneers Initiative (DEPI)",
+    bullets: [
+      "Executed lab-based vulnerability assessments & web app security testing aligned with OWASP Top 10.",
+      "Identified, exploited and documented security flaws with industry-standard recon & exploitation tools.",
+      "Gained practical experience in penetration testing, networking fundamentals & Linux administration.",
+    ],
+  },
+  {
+    t: "Expected May 2026",
+    role: "B.Sc. Computer Science & Engineering",
+    org: "Future Academy, Egypt",
+    bullets: ["eJPTv2 preparation running in parallel with degree coursework."],
+  },
+];
+
+const CERTS = [
+  { y: "2026", n: "Penetration Testing Student (eJPTv2 Prep)" },
+  { y: "2025", n: "Infrastructure & Security VAPT — DEPI" },
+  { y: "2025", n: "HCIA-Datacom V1.0" },
+  { y: "2025", n: "Computer Network Fundamentals" },
+  { y: "2023", n: "Front-End Web Development" },
+  { y: "2023", n: "SQL Fundamentals" },
+];
+
+const LABS = [
+  { p: "TryHackMe", d: "Top 15% globally · 41 rooms (Web · Nmap · Linux)" },
+  { p: "PortSwigger Academy", d: "60+ labs solved (SQLi · XSS · IDOR · Path Traversal · Auth Bypass)" },
+  { p: "HackTheBox", d: "Hands-on CTF practice · real-world exploitation techniques" },
+  { p: "ECPC", d: "Egyptian Collegiate Programming Contest · Participant 2023 & 2024" },
+];
 
 const SKILLS = [
   { k: "OWASP", v: ["IDOR", "SQLi", "XSS", "CSRF", "SSRF", "BAC", "Logic Flaws"] },
