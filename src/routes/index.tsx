@@ -257,6 +257,7 @@ function Index() {
         </div>
         <div className="hidden gap-6 text-muted-foreground md:flex">
           <a href="#arsenal" className="hover:text-primary">/arsenal</a>
+          <a href="#services" className="hover:text-primary">/services</a>
           <a href="#engagements" className="hover:text-primary">/engagements</a>
           <a href="#timeline" className="hover:text-primary">/timeline</a>
           <a href="#credentials" className="hover:text-primary">/credentials</a>
