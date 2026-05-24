@@ -481,13 +481,18 @@ function Index() {
             uptime: <span className="text-primary">{EXPERIENCE.length}</span> nodes traced
           </div>
         </div>
-        <ol className="relative space-y-8 border-l border-border pl-8">
+        <ol className="relative space-y-10 border-l border-border pl-8">
           {EXPERIENCE.map((e, i) => (
-            <li key={i} className="relative">
+            <li key={i} className="group relative">
               <span className="absolute -left-[37px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-primary bg-background">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_currentColor]" />
+                <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_currentColor] group-hover:animate-pulse" />
               </span>
-              <div className="text-[11px] tracking-widest text-accent">{e.t}</div>
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <span className="text-[11px] tracking-widest text-accent">{e.t}</span>
+                {(e as any).location && (
+                  <span className="text-[10px] tracking-widest text-muted-foreground">· {(e as any).location}</span>
+                )}
+              </div>
               <div className="font-display mt-1 text-lg font-semibold text-foreground">
                 {e.role} <span className="text-muted-foreground">· {e.org}</span>
               </div>
@@ -499,9 +504,82 @@ function Index() {
                   </li>
                 ))}
               </ul>
+              {(e as any).tags && (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {(e as any).tags.map((t: string) => (
+                    <span key={t} className="rounded-sm border border-border bg-surface/40 px-1.5 py-0.5 text-[10px] tracking-wider text-foreground/80">
+                      #{t}
+                    </span>
+                  ))}
+                </div>
+              )}
             </li>
           ))}
         </ol>
+
+        {/* EDUCATION */}
+        <div className="mt-16">
+          <div className="mb-6 flex items-end justify-between border-b border-border pb-4">
+            <div>
+              <div className="text-[11px] tracking-[0.3em] text-accent">// boot.sequence</div>
+              <h2 className="font-display mt-2 text-3xl font-bold tracking-tight">Education</h2>
+            </div>
+          </div>
+          <ol className="relative space-y-6 border-l border-border pl-8">
+            {EDUCATION.map((e, i) => (
+              <li key={i} className="relative">
+                <span className="absolute -left-[37px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-accent bg-background">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_currentColor]" />
+                </span>
+                <div className="text-[11px] tracking-widest text-accent">{e.t}</div>
+                <div className="font-display mt-1 text-lg font-semibold text-foreground">
+                  {e.role} <span className="text-muted-foreground">· {e.org}</span>
+                </div>
+                <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                  {e.bullets.map((b, j) => (
+                    <li key={j} className="flex gap-2">
+                      <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-accent/70" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* SERVICES — "What I Can Do For You" */}
+      <section id="services" className="relative z-10 mx-auto max-w-7xl px-6 pb-24">
+        <div className="mb-8 flex items-end justify-between border-b border-border pb-4">
+          <div>
+            <div className="text-[11px] tracking-[0.3em] text-accent">// services.exe</div>
+            <h2 className="font-display mt-2 text-4xl font-bold tracking-tight">
+              What I Can <span className="text-primary text-glow">Break</span> For You
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+              As an offensive security operator, here's how I help teams ship safer systems — from a single endpoint to a full attack surface.
+            </p>
+          </div>
+          <div className="hidden text-right text-xs text-muted-foreground md:block">
+            {SERVICES.length} modules · armed
+          </div>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map((s) => (
+            <Spotlight key={s.title} className="group p-6">
+              <div className="flex items-center gap-3">
+                <span className="font-display text-3xl text-primary text-glow transition group-hover:scale-110">{s.icon}</span>
+                <div className="h-px flex-1 bg-border" />
+                <span className="font-mono text-[10px] tracking-widest text-muted-foreground">SVC</span>
+              </div>
+              <h3 className="font-display mt-4 text-lg font-bold text-foreground transition group-hover:text-primary">
+                {s.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+            </Spotlight>
+          ))}
+        </div>
       </section>
 
       {/* CERTIFICATIONS + LABS */}
