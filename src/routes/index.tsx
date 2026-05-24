@@ -193,14 +193,25 @@ function Index() {
           <a href="#arsenal" className="hover:text-primary">/arsenal</a>
           <a href="#engagements" className="hover:text-primary">/engagements</a>
           <a href="#timeline" className="hover:text-primary">/timeline</a>
+          <a href="#credentials" className="hover:text-primary">/credentials</a>
           <a href="#contact" className="hover:text-primary">/contact</a>
         </div>
-        <a
-          href={`mailto:${EMAIL}`}
-          className="rounded border border-primary/50 bg-primary/10 px-3 py-1.5 text-primary transition hover:bg-primary hover:text-primary-foreground"
-        >
-          ./contact.sh
-        </a>
+        <div className="flex items-center gap-2">
+          <a
+            href={LINKEDIN}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden rounded border border-border bg-surface/60 px-3 py-1.5 text-muted-foreground transition hover:border-accent hover:text-accent md:inline-block"
+          >
+            in/
+          </a>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="rounded border border-primary/50 bg-primary/10 px-3 py-1.5 text-primary transition hover:bg-primary hover:text-primary-foreground"
+          >
+            ./contact.sh
+          </a>
+        </div>
       </header>
 
       {/* HERO */}
