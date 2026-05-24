@@ -23,35 +23,92 @@ const PHONE = "+201124890707";
 
 const EXPERIENCE = [
   {
+    t: "May 2026 — Present",
+    role: "Security Researcher",
+    org: "RootX · Part-time",
+    location: "Egypt · Remote",
+    bullets: [
+      "Conducting offensive security research and penetration testing engagements.",
+      "Focused on web/API vulnerability discovery, exploit development, and clear technical reporting.",
+    ],
+    tags: ["Pentesting", "Cybersecurity", "Web", "API"],
+  },
+  {
+    t: "Sep 2025 — Present",
+    role: "Cybersecurity Head",
+    org: "GDG On Campus · Future Academy",
+    location: "Cairo, Egypt",
+    bullets: [
+      "Led the cybersecurity track, training 50+ students through workshops and live demos.",
+      "Designed hands-on sessions on networking, vulnerabilities, OSINT, and secure coding.",
+      "Integrated AI tooling to help students understand threats and automate analysis.",
+      "Collaborated with technical teams to enforce security practices across events and projects.",
+    ],
+    tags: ["Leadership", "OSINT", "Training"],
+  },
+  {
+    t: "Jul 2025 — Present",
+    role: "Cyber Security Trainee",
+    org: "Digital Egypt Pioneers Initiative (DEPI) · Internship",
+    location: "Alexandria, Egypt · Remote",
+    bullets: [
+      "Structured training in network fundamentals, Linux, vulnerability assessment, and pentesting.",
+      "Performed lab-based exercises simulating real-world attacks and defenses.",
+      "Leveraged AI tools to document findings and reinforce key concepts.",
+    ],
+    tags: ["Nikto", "VAPT", "Linux", "Networking"],
+  },
+  {
+    t: "Jun 2025 — Present",
+    role: "Game Tester — Beta Tester",
+    org: "Dream Team Creative Collective · Freelance",
+    location: "Remote",
+    bullets: [
+      "Tested Web3 and indie game UI/UX — usability, design inconsistencies, functional bugs.",
+      "Documented issues via structured bug reports: reproducible steps, screenshots, user-flow context.",
+      "Improved gameplay through feedback on design, navigation, and interaction.",
+      "Used AI-assisted tools to analyze patterns and automate parts of test documentation.",
+    ],
+    tags: ["Game Testing", "QA", "Web3"],
+  },
+  {
     t: "Nov 2025 — Feb 2026",
     role: "Cyber Security Trainee",
-    org: "Cyberthos",
+    org: "Cyberthos · Internship",
     bullets: [
-      "Completed hands-on penetration testing training focused on real-world assessment workflows.",
-      "Conducted reconnaissance, enumeration & vulnerability analysis in simulated lab environments.",
-      "Drafted professional vulnerability reports with exploitation techniques and actionable remediation.",
+      "Assisted in vulnerability assessment and penetration testing tasks under supervision.",
+      "Practiced network scanning, enumeration, and exploitation with Nmap, Burp Suite, Metasploit.",
+      "Used AI-powered assistants to accelerate research and document findings ethically.",
+      "Hands-on labs across reconnaissance, OSINT, and basic exploitation.",
     ],
+    tags: ["Nmap", "Burp Suite", "Metasploit"],
   },
   {
-    t: "Oct 2025 — Present",
-    role: "Cybersecurity Instructor (Volunteer)",
-    org: "GDG Future Academy",
+    t: "May 2025 — Jul 2025",
+    role: "Official Game Night Host — Vexor",
+    org: "Freelance",
+    location: "Remote",
     bullets: [
-      "Delivered foundational cybersecurity & pentesting workshops to 50+ students.",
-      "Designed and guided hands-on labs to build students' practical offensive security skills.",
-      "Simplified complex topics including OSINT, web vulnerabilities, and networking concepts.",
+      "Selected for the exclusive Vexor Founder Program for community reputation and engagement.",
+      "Hosted official Web3 Game Night events: match setups, player coordination, event flow.",
+      "Drove community participation through well-organized competitive experiences.",
     ],
+    tags: ["Community", "Web3", "Events"],
   },
   {
-    t: "Jun 2025 — Dec 2025",
-    role: "Cyber Security Trainee",
-    org: "Digital Egypt Pioneers Initiative (DEPI)",
+    t: "Apr 2024 — Mar 2025",
+    role: "3D Visual Designer — Educational Projects",
+    org: "ICPC Future Academy · Freelance",
+    location: "Remote",
     bullets: [
-      "Executed lab-based vulnerability assessments & web app security testing aligned with OWASP Top 10.",
-      "Identified, exploited and documented security flaws with industry-standard recon & exploitation tools.",
-      "Gained practical experience in penetration testing, networking fundamentals & Linux administration.",
+      "Created 3D models and animations in Blender to support technical education.",
+      "Designed visual assets explaining memory allocation, data structures, and algorithms.",
     ],
+    tags: ["Blender", "3D", "Education"],
   },
+];
+
+const EDUCATION = [
   {
     t: "Expected May 2026",
     role: "B.Sc. Computer Science & Engineering",
@@ -74,6 +131,15 @@ const LABS = [
   { p: "PortSwigger Academy", d: "60+ labs solved (SQLi · XSS · IDOR · Path Traversal · Auth Bypass)" },
   { p: "HackTheBox", d: "Hands-on CTF practice · real-world exploitation techniques" },
   { p: "ECPC", d: "Egyptian Collegiate Programming Contest · Participant 2023 & 2024" },
+];
+
+const SERVICES = [
+  { icon: "◈", title: "Web App Penetration Testing", body: "End-to-end testing of web apps against OWASP Top 10 — SQLi, XSS, IDOR, SSRF, auth flaws." },
+  { icon: "⟁", title: "API Security Assessment", body: "REST & GraphQL audits — broken auth, BOLA, mass assignment, rate-limit bypass, business-logic abuse." },
+  { icon: "⌖", title: "Reconnaissance & Attack Surface Mapping", body: "Subdomain enumeration, asset discovery, and exposure mapping with Subfinder, Amass, Httpx, Nuclei." },
+  { icon: "⌬", title: "Vulnerability Assessment (VAPT)", body: "Structured VAPT engagements with prioritized findings, proof-of-concept, and remediation steps." },
+  { icon: "◇", title: "Bug Bounty Triage Support", body: "Reproduce, validate, and write clean H1-style reports with impact analysis and PoC chains." },
+  { icon: "⌁", title: "Security Awareness & Training", body: "Hands-on workshops on secure coding, OSINT, phishing defense, and threat modeling for teams." },
 ];
 
 const SKILLS = [
