@@ -378,28 +378,76 @@ function Index() {
 
       {/* TIMELINE */}
       <section id="timeline" className="relative z-10 mx-auto max-w-7xl px-6 pb-24">
-        <div className="mb-8">
-          <div className="text-[11px] tracking-[0.3em] text-accent">// trace.route</div>
-          <h2 className="font-display mt-2 text-4xl font-bold tracking-tight">Operations Timeline</h2>
+        <div className="mb-8 flex items-end justify-between border-b border-border pb-4">
+          <div>
+            <div className="text-[11px] tracking-[0.3em] text-accent">// trace.route</div>
+            <h2 className="font-display mt-2 text-4xl font-bold tracking-tight">Operations Timeline</h2>
+          </div>
+          <div className="hidden text-right text-xs text-muted-foreground md:block">
+            uptime: <span className="text-primary">{EXPERIENCE.length}</span> nodes traced
+          </div>
         </div>
-        <ol className="relative space-y-6 border-l border-border pl-8">
-          {[
-            { t: "Nov 2025 — Feb 2026", h: "Cyber Security Trainee · Cyberthos", b: "Hands-on penetration testing. Recon, enumeration, vuln analysis, formal report drafting." },
-            { t: "Oct 2025 — Present", h: "Cybersecurity Instructor (Volunteer) · GDG Future Academy", b: "Delivered offensive-security workshops to 50+ students. Designed practical labs from OSINT → web vulns." },
-            { t: "Jun 2025 — Dec 2025", h: "Cyber Security Trainee · DEPI", b: "OWASP-aligned web app testing. Exploited & documented findings with industry-standard tooling." },
-            { t: "Expected May 2026", h: "B.Sc. Computer Science & Engineering", b: "Future Academy, Egypt. eJPTv2 prep in parallel." },
-          ].map((e, i) => (
+        <ol className="relative space-y-8 border-l border-border pl-8">
+          {EXPERIENCE.map((e, i) => (
             <li key={i} className="relative">
               <span className="absolute -left-[37px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-primary bg-background">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_currentColor]" />
               </span>
               <div className="text-[11px] tracking-widest text-accent">{e.t}</div>
-              <div className="font-display mt-1 text-lg font-semibold text-foreground">{e.h}</div>
-              <div className="mt-1 max-w-2xl text-sm text-muted-foreground">{e.b}</div>
+              <div className="font-display mt-1 text-lg font-semibold text-foreground">
+                {e.role} <span className="text-muted-foreground">· {e.org}</span>
+              </div>
+              <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
+                {e.bullets.map((b, j) => (
+                  <li key={j} className="flex gap-2">
+                    <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-primary/70" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ol>
       </section>
+
+      {/* CERTIFICATIONS + LABS */}
+      <section id="credentials" className="relative z-10 mx-auto max-w-7xl px-6 pb-24">
+        <div className="mb-8 border-b border-border pb-4">
+          <div className="text-[11px] tracking-[0.3em] text-accent">// credentials.dump</div>
+          <h2 className="font-display mt-2 text-4xl font-bold tracking-tight">Certifications & Labs</h2>
+        </div>
+        <div className="grid gap-5 md:grid-cols-2">
+          <Spotlight className="p-6">
+            <div className="mb-4 flex items-baseline justify-between">
+              <h3 className="font-display text-xl font-bold">$ ls ./certs/</h3>
+              <span className="text-[10px] tracking-widest text-muted-foreground">{CERTS.length} files</span>
+            </div>
+            <ul className="space-y-2 font-mono text-sm">
+              {CERTS.map((c) => (
+                <li key={c.n} className="group flex items-center gap-3 rounded border border-transparent px-2 py-1.5 transition hover:border-primary/40 hover:bg-primary/5">
+                  <span className="text-accent">[{c.y}]</span>
+                  <span className="text-foreground/90 group-hover:text-primary">{c.n}</span>
+                </li>
+              ))}
+            </ul>
+          </Spotlight>
+          <Spotlight className="p-6">
+            <div className="mb-4 flex items-baseline justify-between">
+              <h3 className="font-display text-xl font-bold">$ ./labs --status</h3>
+              <span className="text-[10px] tracking-widest text-muted-foreground">live training</span>
+            </div>
+            <ul className="space-y-3">
+              {LABS.map((l) => (
+                <li key={l.p} className="border-l-2 border-primary/60 pl-3">
+                  <div className="font-display text-base font-semibold text-foreground">{l.p}</div>
+                  <div className="text-xs text-muted-foreground">{l.d}</div>
+                </li>
+              ))}
+            </ul>
+          </Spotlight>
+        </div>
+      </section>
+
 
       {/* CONTACT */}
       <section id="contact" className="relative z-10 mx-auto max-w-7xl px-6 pb-24">
