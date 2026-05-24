@@ -23,35 +23,92 @@ const PHONE = "+201124890707";
 
 const EXPERIENCE = [
   {
+    t: "May 2026 — Present",
+    role: "Security Researcher",
+    org: "RootX · Part-time",
+    location: "Egypt · Remote",
+    bullets: [
+      "Conducting offensive security research and penetration testing engagements.",
+      "Focused on web/API vulnerability discovery, exploit development, and clear technical reporting.",
+    ],
+    tags: ["Pentesting", "Cybersecurity", "Web", "API"],
+  },
+  {
+    t: "Sep 2025 — Present",
+    role: "Cybersecurity Head",
+    org: "GDG On Campus · Future Academy",
+    location: "Cairo, Egypt",
+    bullets: [
+      "Led the cybersecurity track, training 50+ students through workshops and live demos.",
+      "Designed hands-on sessions on networking, vulnerabilities, OSINT, and secure coding.",
+      "Integrated AI tooling to help students understand threats and automate analysis.",
+      "Collaborated with technical teams to enforce security practices across events and projects.",
+    ],
+    tags: ["Leadership", "OSINT", "Training"],
+  },
+  {
+    t: "Jul 2025 — Present",
+    role: "Cyber Security Trainee",
+    org: "Digital Egypt Pioneers Initiative (DEPI) · Internship",
+    location: "Alexandria, Egypt · Remote",
+    bullets: [
+      "Structured training in network fundamentals, Linux, vulnerability assessment, and pentesting.",
+      "Performed lab-based exercises simulating real-world attacks and defenses.",
+      "Leveraged AI tools to document findings and reinforce key concepts.",
+    ],
+    tags: ["Nikto", "VAPT", "Linux", "Networking"],
+  },
+  {
+    t: "Jun 2025 — Present",
+    role: "Game Tester — Beta Tester",
+    org: "Dream Team Creative Collective · Freelance",
+    location: "Remote",
+    bullets: [
+      "Tested Web3 and indie game UI/UX — usability, design inconsistencies, functional bugs.",
+      "Documented issues via structured bug reports: reproducible steps, screenshots, user-flow context.",
+      "Improved gameplay through feedback on design, navigation, and interaction.",
+      "Used AI-assisted tools to analyze patterns and automate parts of test documentation.",
+    ],
+    tags: ["Game Testing", "QA", "Web3"],
+  },
+  {
     t: "Nov 2025 — Feb 2026",
     role: "Cyber Security Trainee",
-    org: "Cyberthos",
+    org: "Cyberthos · Internship",
     bullets: [
-      "Completed hands-on penetration testing training focused on real-world assessment workflows.",
-      "Conducted reconnaissance, enumeration & vulnerability analysis in simulated lab environments.",
-      "Drafted professional vulnerability reports with exploitation techniques and actionable remediation.",
+      "Assisted in vulnerability assessment and penetration testing tasks under supervision.",
+      "Practiced network scanning, enumeration, and exploitation with Nmap, Burp Suite, Metasploit.",
+      "Used AI-powered assistants to accelerate research and document findings ethically.",
+      "Hands-on labs across reconnaissance, OSINT, and basic exploitation.",
     ],
+    tags: ["Nmap", "Burp Suite", "Metasploit"],
   },
   {
-    t: "Oct 2025 — Present",
-    role: "Cybersecurity Instructor (Volunteer)",
-    org: "GDG Future Academy",
+    t: "May 2025 — Jul 2025",
+    role: "Official Game Night Host — Vexor",
+    org: "Freelance",
+    location: "Remote",
     bullets: [
-      "Delivered foundational cybersecurity & pentesting workshops to 50+ students.",
-      "Designed and guided hands-on labs to build students' practical offensive security skills.",
-      "Simplified complex topics including OSINT, web vulnerabilities, and networking concepts.",
+      "Selected for the exclusive Vexor Founder Program for community reputation and engagement.",
+      "Hosted official Web3 Game Night events: match setups, player coordination, event flow.",
+      "Drove community participation through well-organized competitive experiences.",
     ],
+    tags: ["Community", "Web3", "Events"],
   },
   {
-    t: "Jun 2025 — Dec 2025",
-    role: "Cyber Security Trainee",
-    org: "Digital Egypt Pioneers Initiative (DEPI)",
+    t: "Apr 2024 — Mar 2025",
+    role: "3D Visual Designer — Educational Projects",
+    org: "ICPC Future Academy · Freelance",
+    location: "Remote",
     bullets: [
-      "Executed lab-based vulnerability assessments & web app security testing aligned with OWASP Top 10.",
-      "Identified, exploited and documented security flaws with industry-standard recon & exploitation tools.",
-      "Gained practical experience in penetration testing, networking fundamentals & Linux administration.",
+      "Created 3D models and animations in Blender to support technical education.",
+      "Designed visual assets explaining memory allocation, data structures, and algorithms.",
     ],
+    tags: ["Blender", "3D", "Education"],
   },
+];
+
+const EDUCATION = [
   {
     t: "Expected May 2026",
     role: "B.Sc. Computer Science & Engineering",
@@ -74,6 +131,15 @@ const LABS = [
   { p: "PortSwigger Academy", d: "60+ labs solved (SQLi · XSS · IDOR · Path Traversal · Auth Bypass)" },
   { p: "HackTheBox", d: "Hands-on CTF practice · real-world exploitation techniques" },
   { p: "ECPC", d: "Egyptian Collegiate Programming Contest · Participant 2023 & 2024" },
+];
+
+const SERVICES = [
+  { icon: "◈", title: "Web App Penetration Testing", body: "End-to-end testing of web apps against OWASP Top 10 — SQLi, XSS, IDOR, SSRF, auth flaws." },
+  { icon: "⟁", title: "API Security Assessment", body: "REST & GraphQL audits — broken auth, BOLA, mass assignment, rate-limit bypass, business-logic abuse." },
+  { icon: "⌖", title: "Reconnaissance & Attack Surface Mapping", body: "Subdomain enumeration, asset discovery, and exposure mapping with Subfinder, Amass, Httpx, Nuclei." },
+  { icon: "⌬", title: "Vulnerability Assessment (VAPT)", body: "Structured VAPT engagements with prioritized findings, proof-of-concept, and remediation steps." },
+  { icon: "◇", title: "Bug Bounty Triage Support", body: "Reproduce, validate, and write clean H1-style reports with impact analysis and PoC chains." },
+  { icon: "⌁", title: "Security Awareness & Training", body: "Hands-on workshops on secure coding, OSINT, phishing defense, and threat modeling for teams." },
 ];
 
 const SKILLS = [
@@ -191,6 +257,7 @@ function Index() {
         </div>
         <div className="hidden gap-6 text-muted-foreground md:flex">
           <a href="#arsenal" className="hover:text-primary">/arsenal</a>
+          <a href="#services" className="hover:text-primary">/services</a>
           <a href="#engagements" className="hover:text-primary">/engagements</a>
           <a href="#timeline" className="hover:text-primary">/timeline</a>
           <a href="#credentials" className="hover:text-primary">/credentials</a>
@@ -244,9 +311,25 @@ function Index() {
               <span className="relative z-10">→ INITIATE CONTACT</span>
             </a>
             <a
-              href={LINKEDIN}
+              href="/cv"
               target="_blank"
               rel="noreferrer"
+              className="rounded border border-accent/60 bg-accent/10 px-5 py-3 text-sm tracking-wider text-accent transition hover:bg-accent hover:text-background"
+            >
+              ◉ view_cv
+            </a>
+            <a
+              href="/cv?print=1"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded border border-border bg-surface/50 px-5 py-3 text-sm tracking-wider text-foreground transition hover:border-primary hover:text-primary"
+            >
+              ⬇ download_cv.pdf
+            </a>
+            <a
+              href={LINKEDIN}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded border border-border bg-surface/50 px-5 py-3 text-sm tracking-wider text-foreground transition hover:border-accent hover:text-accent"
             >
               linkedin://ahmedsamyamin
@@ -398,13 +481,18 @@ function Index() {
             uptime: <span className="text-primary">{EXPERIENCE.length}</span> nodes traced
           </div>
         </div>
-        <ol className="relative space-y-8 border-l border-border pl-8">
+        <ol className="relative space-y-10 border-l border-border pl-8">
           {EXPERIENCE.map((e, i) => (
-            <li key={i} className="relative">
+            <li key={i} className="group relative">
               <span className="absolute -left-[37px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-primary bg-background">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_currentColor]" />
+                <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_currentColor] group-hover:animate-pulse" />
               </span>
-              <div className="text-[11px] tracking-widest text-accent">{e.t}</div>
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <span className="text-[11px] tracking-widest text-accent">{e.t}</span>
+                {(e as any).location && (
+                  <span className="text-[10px] tracking-widest text-muted-foreground">· {(e as any).location}</span>
+                )}
+              </div>
               <div className="font-display mt-1 text-lg font-semibold text-foreground">
                 {e.role} <span className="text-muted-foreground">· {e.org}</span>
               </div>
@@ -416,9 +504,82 @@ function Index() {
                   </li>
                 ))}
               </ul>
+              {(e as any).tags && (
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {(e as any).tags.map((t: string) => (
+                    <span key={t} className="rounded-sm border border-border bg-surface/40 px-1.5 py-0.5 text-[10px] tracking-wider text-foreground/80">
+                      #{t}
+                    </span>
+                  ))}
+                </div>
+              )}
             </li>
           ))}
         </ol>
+
+        {/* EDUCATION */}
+        <div className="mt-16">
+          <div className="mb-6 flex items-end justify-between border-b border-border pb-4">
+            <div>
+              <div className="text-[11px] tracking-[0.3em] text-accent">// boot.sequence</div>
+              <h2 className="font-display mt-2 text-3xl font-bold tracking-tight">Education</h2>
+            </div>
+          </div>
+          <ol className="relative space-y-6 border-l border-border pl-8">
+            {EDUCATION.map((e, i) => (
+              <li key={i} className="relative">
+                <span className="absolute -left-[37px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-accent bg-background">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_currentColor]" />
+                </span>
+                <div className="text-[11px] tracking-widest text-accent">{e.t}</div>
+                <div className="font-display mt-1 text-lg font-semibold text-foreground">
+                  {e.role} <span className="text-muted-foreground">· {e.org}</span>
+                </div>
+                <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                  {e.bullets.map((b, j) => (
+                    <li key={j} className="flex gap-2">
+                      <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-accent/70" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* SERVICES — "What I Can Do For You" */}
+      <section id="services" className="relative z-10 mx-auto max-w-7xl px-6 pb-24">
+        <div className="mb-8 flex items-end justify-between border-b border-border pb-4">
+          <div>
+            <div className="text-[11px] tracking-[0.3em] text-accent">// services.exe</div>
+            <h2 className="font-display mt-2 text-4xl font-bold tracking-tight">
+              What I Can <span className="text-primary text-glow">Break</span> For You
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+              As an offensive security operator, here's how I help teams ship safer systems — from a single endpoint to a full attack surface.
+            </p>
+          </div>
+          <div className="hidden text-right text-xs text-muted-foreground md:block">
+            {SERVICES.length} modules · armed
+          </div>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map((s) => (
+            <Spotlight key={s.title} className="group p-6">
+              <div className="flex items-center gap-3">
+                <span className="font-display text-3xl text-primary text-glow transition group-hover:scale-110">{s.icon}</span>
+                <div className="h-px flex-1 bg-border" />
+                <span className="font-mono text-[10px] tracking-widest text-muted-foreground">SVC</span>
+              </div>
+              <h3 className="font-display mt-4 text-lg font-bold text-foreground transition group-hover:text-primary">
+                {s.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+            </Spotlight>
+          ))}
+        </div>
       </section>
 
       {/* CERTIFICATIONS + LABS */}
