@@ -311,9 +311,25 @@ function Index() {
               <span className="relative z-10">→ INITIATE CONTACT</span>
             </a>
             <a
-              href={LINKEDIN}
+              href="/cv"
               target="_blank"
               rel="noreferrer"
+              className="rounded border border-accent/60 bg-accent/10 px-5 py-3 text-sm tracking-wider text-accent transition hover:bg-accent hover:text-background"
+            >
+              ◉ view_cv
+            </a>
+            <a
+              href="/cv?print=1"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded border border-border bg-surface/50 px-5 py-3 text-sm tracking-wider text-foreground transition hover:border-primary hover:text-primary"
+            >
+              ⬇ download_cv.pdf
+            </a>
+            <a
+              href={LINKEDIN}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded border border-border bg-surface/50 px-5 py-3 text-sm tracking-wider text-foreground transition hover:border-accent hover:text-accent"
             >
               linkedin://ahmedsamyamin
