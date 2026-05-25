@@ -19,6 +19,8 @@ export const Route = createFileRoute("/")({
 
 const EMAIL = "ahmedsamyaminhamed@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/ahmedsamyamin/";
+const GITHUB = "https://github.com/thoristo154";
+const CV_FILE = "/Ahmed_Samy_CV.pdf";
 const PHONE = "+201124890707";
 
 const EXPERIENCE = [
@@ -158,6 +160,7 @@ const PROJECTS = [
     status: "TRIAGED",
     tags: ["Privilege Escalation", "API", "BAC"],
     body: "Server-side authorization flaw — Free-tier accounts able to invoke premium scanning & secrets endpoints via crafted API requests. Verified end-to-end with full request/response chain.",
+    link: GITHUB,
   },
   {
     id: "TOOL-RECON-V2",
@@ -167,6 +170,7 @@ const PROJECTS = [
     status: "SHIPPED",
     tags: ["Subfinder", "Amass", "Httpx", "Pipeline"],
     body: "Automated subdomain enumeration + HTTP probing pipeline. Chains Subfinder/Amass/Httpx into a scalable recon engine — cuts manual recon time by ~60%.",
+    link: GITHUB,
   },
   {
     id: "LAB-PSWIGGER",
@@ -176,6 +180,7 @@ const PROJECTS = [
     status: "ACTIVE",
     tags: ["SQLi", "XSS", "IDOR", "Auth Bypass", "Path Traversal"],
     body: "Sixty plus PortSwigger Web Security labs solved across injection, access control, and authentication categories.",
+    link: "https://portswigger.net/users/00s7Q4cikC",
   },
   {
     id: "RANK-THM",
@@ -185,6 +190,7 @@ const PROJECTS = [
     status: "LIVE",
     tags: ["Web", "Nmap", "Linux", "CTF"],
     body: "Sustained top-15% global ranking. Focus on web fundamentals, network mapping, and Linux post-exploitation.",
+    link: "https://tryhackme.com/",
   },
 ];
 
@@ -265,6 +271,14 @@ function Index() {
         </div>
         <div className="flex items-center gap-2">
           <a
+            href={GITHUB}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden rounded border border-border bg-surface/60 px-3 py-1.5 text-muted-foreground transition hover:border-accent hover:text-accent md:inline-block"
+          >
+            git/
+          </a>
+          <a
             href={LINKEDIN}
             target="_blank"
             rel="noopener noreferrer"
@@ -319,9 +333,8 @@ function Index() {
               ◉ view_cv
             </a>
             <a
-              href="/cv?print=1"
-              target="_blank"
-              rel="noreferrer"
+              href={CV_FILE}
+              download="Ahmed_Samy_CV.pdf"
               className="rounded border border-border bg-surface/50 px-5 py-3 text-sm tracking-wider text-foreground transition hover:border-primary hover:text-primary"
             >
               ⬇ download_cv.pdf
@@ -333,6 +346,14 @@ function Index() {
               className="rounded border border-border bg-surface/50 px-5 py-3 text-sm tracking-wider text-foreground transition hover:border-accent hover:text-accent"
             >
               linkedin://ahmedsamyamin
+            </a>
+            <a
+              href={GITHUB}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded border border-border bg-surface/50 px-5 py-3 text-sm tracking-wider text-foreground transition hover:border-accent hover:text-accent"
+            >
+              github://thoristo154
             </a>
           </div>
 
@@ -463,7 +484,14 @@ function Index() {
               </div>
               <div className="mt-5 flex items-center justify-between border-t border-border pt-3 text-[10px] tracking-widest text-muted-foreground">
                 <span>STATUS: <span className="text-primary">{p.status}</span></span>
-                <span className="opacity-60 transition group-hover:opacity-100">└─ view payload →</span>
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent opacity-80 transition hover:opacity-100"
+                >
+                  └─ view payload →
+                </a>
               </div>
             </Spotlight>
           ))}
