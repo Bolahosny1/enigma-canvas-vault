@@ -72,18 +72,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Junior Penetration Tester and Bug Bounty Hunter with expertise in web application security, API testing, and vulnerability assessments." },
+      { title: "Ahmed Samy — Offensive Security Portfolio" },
+      {
+        name: "description",
+        content:
+          "Junior Penetration Tester and Bug Bounty Hunter with expertise in web application security, API testing, and vulnerability assessments.",
+      },
       { name: "author", content: "Ahmed Samy" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Junior Penetration Tester and Bug Bounty Hunter with expertise in web application security, API testing, and vulnerability assessments." },
+      { property: "og:title", content: "Ahmed Samy - Offensive Security Portfolio" },
+      {
+        property: "og:description",
+        content:
+          "Junior Penetration Tester and Bug Bounty Hunter with expertise in web application security, API testing, and vulnerability assessments.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Junior Penetration Tester and Bug Bounty Hunter with expertise in web application security, API testing, and vulnerability assessments." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/41JgsposNiSbUJ2eZCzKMAMfq2r2/social-images/social-1779657151235-1763848486699.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/41JgsposNiSbUJ2eZCzKMAMfq2r2/social-images/social-1779657151235-1763848486699.webp" },
+      { name: "twitter:site", content: "@AhmedSamySec" },
+      { name: "twitter:title", content: "Ahmed Samy - Offensive Security Portfolio" },
+      {
+        name: "twitter:description",
+        content:
+          "Junior Penetration Tester and Bug Bounty Hunter with expertise in web application security, API testing, and vulnerability assessments.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/41JgsposNiSbUJ2eZCzKMAMfq2r2/social-images/social-1779657151235-1763848486699.webp",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/41JgsposNiSbUJ2eZCzKMAMfq2r2/social-images/social-1779657151235-1763848486699.webp",
+      },
     ],
     links: [
       {
